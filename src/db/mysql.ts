@@ -3,7 +3,7 @@ import { Pool } from "mysql2/promise"; // Pool 타입을 사용하려고 import
 
 const pool: Pool = mysql.createPool({
   host: "localhost",
-  user: "user",
+  user: "root",
   password: "password",
   database: "database",
   waitForConnections: true,
