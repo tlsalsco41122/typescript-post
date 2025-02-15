@@ -17,4 +17,6 @@ export const createData = async (req: Request, res: Response): Promise<void> => 
   } catch (error: any) {
     res.status(500).json({ message: error.message });
   }
+  // error: any -> 어떤 타입이든 허용하지만, 타입 검사가 불가능함. (error.message를 바로 사용할 수 있음)
+  // error: unknown -> 더 안전한 방식! instanceof로 Error 객체인지 확인한 후 error.message를 사용해야 함.
 };
